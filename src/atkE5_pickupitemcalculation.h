@@ -7,13 +7,10 @@
 #include "items.h"
 #include "pickup_items.h"
 
-typedef u16 (*rand_t) (void);
-#define rand ((rand_t) (0x08044EC8 |1))
+u16 rand(void);
+ability_t b_copy_species_ability(pokemon_species_t, u8, u32);
 
-typedef ability_t (*b_copy_species_ability_t) (pokemon_species_t, u8, u32);
-#define b_copy_species_ability ((b_copy_species_ability_t) (0x08040D38 |1))
-
-#define party_player ((pokemon_t*) 0x02024284)
-#define b_movescr_cursor (*((u32*) 0x02023D74))
+extern pokemon_t party_player[6];
+extern u32 b_movescr_cursor;
 
 item_t choose_item (u8 level);
