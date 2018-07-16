@@ -18,6 +18,6 @@ So, if you wanted to change the set of items to that of, say, ORAS, the easiest 
 
 Put a Firered ROM into the project's root directory under the name of `rom.gba`. Adjust `config.ini` with where to start looking for free space in the ROM, which will be where the code will be inserted.
 
-Build it with the modified [make.py](https://github.com/Sagiri/pkmn-make). `make.py` can either be put on your PATH, or if you prefer, copied into the project directory. Depending on whether `make.py` is in your PATH, you'll either do `make.py /path/to/project/root` or `/path/to/make.py /path/to/project/root` to build.
+Run `python scripts/makinoa`.
 
 Output will be in `test.gba`. `BPRE0.gba` will not be modified.
