@@ -6,11 +6,8 @@
 .importobj "build/src/relocatable.o"
 
 .org _atkE5_pickupitemcalculation_
-
-.area 232, 0xFF
-    ldr r3, =atkE5_pickupitemcalculation|1
-    bx r3
-    .pool
+.area 0xE8, 0xFF
+    .importobj "build/src/atkE5_pickupitemcalculation.o"
 .endarea
 
 .close

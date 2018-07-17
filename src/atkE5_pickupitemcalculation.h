@@ -13,4 +13,4 @@ ability_t b_copy_species_ability(pokemon_species_t, u8, u32);
 extern pokemon_t party_player[6];
 extern u32 b_movescr_cursor;
 
-item_t choose_item (u8 level);
+item_t __attribute__((long_call)) choose_item (u8 level);
