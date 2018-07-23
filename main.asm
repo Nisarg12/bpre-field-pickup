@@ -2,8 +2,10 @@
 .thumb
 .open "test.gba", 0x8000000
 
-.org free_space
-.importobj "build/src/relocatable.o"
+.org allocation
+.area allocation_size
+    .importobj "build/src/relocatable.o"
+.endarea
 
 .org _atkE5_pickupitemcalculation_
 .area 0xE8, 0xFF
