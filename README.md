@@ -20,4 +20,4 @@ Put a Firered ROM into the project's root directory under the name of `rom.gba`.
 
 Run `python scripts/makinoa`.
 
-Output will be in `test.gba`. `BPRE0.gba` will not be modified.
+Output will be in `test.gba`. `rom.gba` will not be modified.
