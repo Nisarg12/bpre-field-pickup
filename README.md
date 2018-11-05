@@ -6,7 +6,7 @@ This copies Emerald's Pickup behavior into Fire Red.
 
 ### How do I customize this?
 
-If you've added custom items and intend to make them available via Pickup, you will need to add appropriate `#define`s to `src/items.h`.
+If you've added custom items and intend to make them available via Pickup, you will need to add appropriate `#define`s to `src/defines/items.h`.
 
 If you don't want to use Emerald's set of items, it can be customized by `pickup_common_items` and `pickup_rare_items` in `src/pickup_items.c`. The best way to understand how the order works is to visualize it with a table, like [this](https://bulbapedia.bulbagarden.net/wiki/Pickup_(Ability)#Pok.C3.A9mon_Emerald) one from Bulbapedia.
 
@@ -16,8 +16,10 @@ So, if you wanted to change the set of items to that of, say, ORAS, the easiest 
 
 ### How do I build this?
 
-Put a Firered ROM into the project's root directory under the name of `rom.gba`. Adjust `config.ini` with where to start looking for free space in the ROM, which will be where the code will be inserted.
+You will need to set an `ARMIPS` environment variable pointing to your `armips.exe`. You also need a `DEVKITARM` environment pointing to devkitARM v45's installation directory (likely `C:\devkitPro\devkitARM`).
 
-Run `python scripts/makinoa`.
+Python 3.6 or later is required.
 
-Output will be in `test.gba`. `rom.gba` will not be modified.
+Place your ROM in the project root directory and name it `rom.gba`. Run `python scripts/makinoa`.
+
+Your output is `test.gba`; `rom.gba` will be left unmodified.
