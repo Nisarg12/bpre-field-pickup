@@ -1,6 +1,6 @@
-#include "pickup_items.h"
+#include "defines.h"
 
-item_t pickup_common_items[PU_NUM_COMMON_ITEMS] = {
+u16 pickup_common_items[PU_NUM_COMMON_ITEMS] = {
     ITEM_POTION,
     ITEM_ANTIDOTE,
     ITEM_SUPERPOTION,
@@ -21,7 +21,7 @@ item_t pickup_common_items[PU_NUM_COMMON_ITEMS] = {
     ITEM_MAXELIXIR
 };
 
-item_t pickup_rare_items[PU_NUM_RARE_ITEMS] = {
+u16 pickup_rare_items[PU_NUM_RARE_ITEMS] = {
     ITEM_HYPERPOTION,
     ITEM_NUGGET,
     ITEM_KINGSROCK,

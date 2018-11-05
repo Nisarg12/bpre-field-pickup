@@ -1,9 +1,9 @@
-#include "atkE5_pickupitemcalculation.h"
+#include "defines.h"
 
-item_t choose_item (u8 level) {
+u16 choose_item (u8 level) {
     u32 row_num = (level - 1) / 10;
-    item_t* common_row = pickup_common_items + row_num;
-    item_t* rare_row = pickup_rare_items + row_num;
+    u16* common_row = pickup_common_items + row_num;
+    u16* rare_row = pickup_rare_items + row_num;
     
     u16 k = rand();
     
